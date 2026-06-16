@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subti</title>
+    <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Top header: big title + search -->
+    <div class="header-top">
+      <div class="big-title"><a href="index.html"><img src="logo.png" alt="Subti"></a></div>
+      <div class="search">
+        <input type="search" placeholder="Search..." aria-label="Search this page">
+      </div>
+    </div>
+
+    <!-- Black line under big title -->
+    <div class="line-top"></div>
+
+    <div class="menu">
+      <div class="menu-options">
+        <a href="download.html">DOWNLOAD</a>
+        <a href="faq.html">FAQ</a>
+        <a href="howto.html">HOW TO</a>
+        <a href="support.html">SUPPORT</a>
+        <a href="philosophy.html">PHILOSOPHY</a>
+        <a href="news.html">NEWS</a>
+      </div>
+    </div>
+
+    <div class="line-top"></div>
+
+
+    <!-- Hero section -->
+  <div class="hero-text">
+    <h2>How to</h2>
+    <h4>The many use cases of Subti</h4>
+    <h6>Learning languages through subtitles</h6>
+    <p>Subti's live translation lets you learn a language passively through subtitles. The principle behind this has been well-documented in research. One of the reasons why Scandinavian countries, for instance, have high English proficiency is that they subtitle English TV shows instead of dubbing them.  I find it especially useful for chat programs like WhatsApp, where the live subtitles teach me how to say what I want to say in the language I want to learn. Similarly, it works really well for Outlook or Word, where you do your day-to-day writing on the computer.</p>
+    <p>To get started, simply open Subti, choose your language for the live translation hotkey, close the Settings menu and press the hotkey. Now, anything you type will be translated in real-time as soon as you press ., !, ? or Enter. Of course, you can (and should) filter subti's reception of keys to the apps that you want to use it with. To do this, open settings by right-clicking the statusbar Subti icon and clicking Settings, and click App filter settings on the Quickstart tab or under Advanced/Customization > Live translation.</p>
+    <p>To make sure you do not log when you do not want to, subti has a statusbar widget that can show you when live translation is on and off. The statusbar widget can also show you what languages you are working with as well as many other settings.</p>
+    <p>If you want real language immersion, you can also let subti read the subtitle aloud in your preferred language. To turn on this feature, go to Settings > Advanced/Customization > Hotkeys and check the check for Play sound. When trying to convert the answer to sound, subti first checks for installed text-to-voice languages, and if the language you've chosen is not installed, it reads it using TTS-edge streaming. Using online streaming is a little slower, however, so for heavy usage it is recommended to install the voice. See this link for how.</p>
+    <h6>Editing text</h6>
+    <p>Subti can help you replace text in real-time. In fact, you can have it automatically erase what you type and replace it with LLM input. By default, however, there is an edit prompt that lets you control how you want to manipulate a text. Unlike dictionaries or synonym dictionaries, LLM:s can help you with entire phrases and sentences at once, which means that they can provide more fine-tuned suggestions for the specific writing context. If a word has multiple translations, they are likely to catch the right one.</p>
+    <p>Text editing is, of course, one of the most common usages of LLM tools. Subti, however, makes text editing with LLM:s a much faster and smoother experience. This is because it is automating the prompts for you. In theory, you don't even have to press a hotkey -- you can have it automatically erase what you type and replace it with LLM input. For most usages, however, I recommend using a hotkey. By default, subti has an edit prompt that lets you control how you want to manipulate a text.</p>
+    <p>To start with editing, simply select the text you want to edit and press a hotkey. By default, ctrl+alt+shift+2 lets you translate, ctrl+alt+shift+3 lets you copy-edit, ctrl+alt+shift+4 fetches synonyms and alternative phrasings, and ctrl+alt+shift+5 uses the selected text as prompt. These hotkeys can be highly customized by opening settings (right-click the subti icon in the taskbar and click Settings) > Advanced/Customization > Hotkeys. Once the prompt opens, you can change the output and then press the button to replace or manipulate your written text. In addition to replacing your selected text, subti lets you append or prepend the fetched text, copy it, etc.</p>
+    <h6>Speak to LLM</h6>
+    <p>If you don't feel like typing, Subti lets you prompt LLM:s by simply holding down your hotkey and speaking. (You can also set it to activate the recording and stop it manually by either pressing the hotkey again or clicking the stop button.) </p>
+    <p>The default hotkey for voice input is ctrl+alt+shift+6. If you do not change any settings, the speech hotkey will simply send your speech as a prompt to the LLM and open the answer in the context window. What subti should do with your speech, however, can be customized in Settings > Advanced > Hotkeys.</p>
+    <h6>Automate prompts</h6>
+    <p>Subti is designed to be very flexible and lets you create your own prompts and automations. An underestimated use case for AI models is that is can be used as a dictionary. For instance, you can automate Subti to give you information about a selected word, the history of a particular phenomenon, and so on.</p>
+    <p>To start with prompt automation, go to Settings > Advanced/Customization > Hotkeys and then change the Raw prompt hotkey or create a new hotkey of your own. When you click Customize, you can change the prompts that subti sends to the AI.</p>
+    <p>Together with the possibility to switch between different settings files (another Hotkey under Other hotkeys) this makes Subti highly customizable for your particular automation needs.</p>
+    <h6>Switch quickly between different offline and online AI providers</h6>
+    <p>You can choose and switch between offline and online usage of Subti, and if you choose online usage, you can choose to use Subti firebase or your own API keys. This means that you can use Subti to compare answers of different models.
+    <p>To change the AI settings, go to Settings > Account, or, for the individual hotkeys, Settings > Advanced/Customize > Hotkeys. The Customize menus lets you choose what AI to use for what hotkey. You can also use hotkeys to switch between different settings files if you prefer to have the same model across all hotkeys.</p>
+    <p>Online usage through firebase is the easiest option for most users. It does not require any installation of AI models (which take up about 5 GB of space) or handling of API keys. However, if you do have your own keys, you can choose online self-managed use by going to Settings > Account or, for the individual hotkeys, Settings > Advanced/Customization > Hotkeys.</p>
+    <p>In order for offline usage to work, you need to install the necessary offline models. The subti installer gives you the possibility to install mistral:7b and qwen-2.5:7b.</p>
+    <h6>Personalized look</h6>
+    <p>Subti comes shipped with different themes. If you want to, you can customize almost every aspect of how subti looks. Subti is written in PySide6, which means that it can easily handle transparent, frameless windows.</p>
+    <p>To change the look of subti, go to Settings > Advanced/Customization > Layout. The different widgets have different layout settings. While you edit the settings, you can see the changes in real-time through a preview window.</p>
+
+  </div>
+
+    <div class="line-top"></div>
+
+    <div class="menu">
+      <div class="menu-options">
+        <a href="download.html">DOWNLOAD</a>
+        <a href="faq.html">FAQ</a>
+        <a href="howto.html">HOW TO</a>
+        <a href="support.html">SUPPORT</a>
+        <a href="philosophy.html">PHILOSOPHY</a>
+        <a href="news.html">NEWS</a>
+      </div>
+    </div>
+
+    <!-- Divider below menu -->
+    <div class="line-top"></div>
+    <!-- Menu and social -->
+
+      <div class="social-buttons">
+        <button>Youtube</button>
+        <button>Facebook</button>
+        <button>X</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

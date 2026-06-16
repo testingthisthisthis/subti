@@ -1,0 +1,246 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.container {
+  width: 70%;
+  background-color: #fff;
+  padding: 20px;
+  min-height: 40vh;
+}
+
+/* Top header with big title and search */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.big-title img {
+  height: 3rem;
+  width: 100%;
+  object-fit: contain;
+  max-height: 3rem;
+  max-width: 100%;
+  display: block;
+}
+
+.search input {
+  padding: 8px 12px;
+  font-size: 1rem;
+  width: 220px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+mark.search-hit {
+  background-color: #eee;
+  padding: 0 2px;
+}
+
+mark.search-hit-current {
+  outline: 2px solid black;
+}
+
+.search-results {
+  font-family: 'Courier New', serif;
+  color: #333;
+  margin: 15px 0;
+}
+
+.search-results a {
+  color: #004080;
+  text-decoration: underline;
+}
+
+.search-results a:hover {
+  text-decoration: none;
+}
+
+.search-results ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.search-results li {
+  margin: 0 0 0.75em 0;
+}
+
+.search-results .search-meta {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.search-results .search-error {
+  color: #666;
+}
+
+/* Black line under big title + search */
+.line-top {
+  height: 6px;
+  background-color: black;
+  margin: 15px 0;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.hero-text {
+  max-width: 55%;
+  min-height: 30%;
+}
+
+.hero-text.full-width {
+  max-width: 100%;
+}
+
+.hero-text h2 {
+  font-size: 1.8rem;
+  font-family: 'Courier New', serif;
+  margin: 0 0 10px 0;
+  color: #000000;
+}
+
+.hero-text h4 {
+  font-size: 1.2rem;
+  font-family: 'Courier New', serif;
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+.hero-text h6 {
+  font-size: 1.05rem;
+  font-family: 'Courier New', serif;
+  margin: 1.25em 0 0.5em 0;
+  color: #000000;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin: 0 0 2em 0;
+  font-family: 'Courier New', serif;
+  color: #333;
+  line-height: 1.25;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.hero-image img {
+  max-width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.download-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-family: 'Courier New', serif;
+  color: #333;
+  text-decoration: underline;
+  margin: 0 0 1.25em 0;
+}
+
+.download-link:hover {
+  text-decoration: none;
+}
+
+.version-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Courier New', serif;
+  color: #333;
+}
+
+.version-table th,
+.version-table td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.version-table th {
+  background-color: #eee;
+}
+
+.version-table ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.version-table li {
+  margin: 0 0 0.35em 0;
+}
+
+/* Menu section */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.menu-options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+  color: #004080;
+  font-family: 'Courier New', serif;
+}
+
+.menu-options a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-options a:hover {
+  text-decoration: underline;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+}
+
+.social-buttons button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.feature-list {
+  font-size: 1rem;
+  margin: 10px 0 0 20px;
+  font-family: 'Courier New', serif;
+  color: #333;
+  padding-left: 20px;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+}

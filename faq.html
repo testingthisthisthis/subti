@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subti</title>
+    <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Top header: big title + search -->
+    <div class="header-top">
+      <div class="big-title"><a href="index.html"><img src="logo.png" alt="Subti"></a></div>
+      <div class="search">
+        <input type="search" placeholder="Search..." aria-label="Search this page">
+      </div>
+    </div>
+
+    <!-- Black line under big title -->
+    <div class="line-top"></div>
+
+    <div class="menu">
+      <div class="menu-options">
+        <a href="download.html">DOWNLOAD</a>
+        <a href="faq.html">FAQ</a>
+        <a href="howto.html">HOW TO</a>
+        <a href="support.html">SUPPORT</a>
+        <a href="philosophy.html">PHILOSOPHY</a>
+        <a href="news.html">NEWS</a>
+      </div>
+    </div>
+
+    <div class="line-top"></div>
+
+
+    <!-- Hero section -->
+   <div class="hero">
+     <div class="hero-text">
+       <h2>Frequently Asked Questions</h2>
+       
+       <h4>What languages are supported?</h4>
+       <p>All the languages! No, really, subti's list of languages is only limited by the AI models you want it to prompt. In general, this means that larger languages will work better, although LLM:s are really impressively broad in this sense. I think you can even use subti to learn Klingon, if you want to.</p>
+      <p>As for sounds, the image is a bit more concrete. Subti uses Whisper for speech recognition -- you can see the supported languages <a href="https://github.com/openai/whisper/blob/main/whisper/tokenizer.py">here</a>. For text-to-voice playback, subti will use whatever language you have installed, and if it cannot find the language specified, it uses tts-edge. See <a href="edge-tts-languages.html">this page</a> for a language-to-locale list.</p>
+
+
+      <h4>Is subti free?</h4>
+       <p>Yes, with some limitations. The free version of subti requires ads and using it online with our API keys is limited to gpt-4o-mini and preset prompts. It also keeps tracks of your usage in tokens, and if your account is creating a deficit due to heavy usage, Firebase access can be blocked. You can still use the free version with your own API keys or locally installed AI models.</p>
+      <p>To get rid of the ads, you have to subscribe. Subscription is 3 $ per month. However, in the (highly unlikely) event that your subti firebase API usage reaches 2.5 $, it will block to the same limitations as the free version until you add 1 $ to that month's bill.</p>
+
+      
+
+       <h4>What about my data?</h4>
+       <p>Subti does not collect any of your data. In trial or subscription mode, requests are routed through firebase to the selected AI API. To hedge for abuse, subti keeps track of the number of tokens spent. In the unlikely case that you spend more tokens than the monthly cost of the subscription, you will be prompted to add 1 $ to the bill to cover the costs. In unlocked mode, subti is only keeping track of your login history.</p>
+       
+       <h4>What if I do not want to support American AI companies at this time?</h4>
+       <p>Subti supports using Mistral, which is based in France. If you are concerned about privacy, I suggest you install an offline model and set subti to use it. You can also connect with subti through a VPN.</p>
+       
+       <h4>Why do you have to have ads for the free version?</h4>
+       <p>In addition to the costs of developing and maintaining the program, API requests cost money. Ads help cover these costs.</p>
+
+
+       
+       <!-- Add more Q&A pairs -->
+     </div>
+   </div>
+
+    <div class="line-top"></div>
+
+    <div class="menu">
+      <div class="menu-options">
+        <a href="download.html">DOWNLOAD</a>
+        <a href="faq.html">FAQ</a>
+        <a href="howto.html">HOW TO</a>
+        <a href="support.html">SUPPORT</a>
+        <a href="philosophy.html">PHILOSOPHY</a>
+        <a href="news.html">NEWS</a>
+      </div>
+    </div>
+
+
+    <!-- Divider below menu -->
+    <div class="line-top"></div>
+    <!-- Menu and social -->
+
+      <div class="social-buttons">
+        <button>Youtube</button>
+        <button>Facebook</button>
+        <button>X</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
