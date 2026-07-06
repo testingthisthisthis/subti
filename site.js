@@ -363,3 +363,14 @@
     }
   });
 })();
+
+(() => {
+  for (const img of document.querySelectorAll('.screenshot-preview')) {
+    const staticSrc = img.dataset.static;
+    const animatedSrc = img.dataset.animated;
+    if (!staticSrc || !animatedSrc) continue;
+
+    img.addEventListener('mouseenter', () => { img.src = animatedSrc; });
+    img.addEventListener('mouseleave', () => { img.src = staticSrc; });
+  }
+})();

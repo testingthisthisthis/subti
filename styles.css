@@ -152,17 +152,8 @@ mark.search-hit-current {
   border: 1px solid #ccc;
 }
 
-.screenshot-placeholder {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background-color: #f0f0f0;
-  border: 2px dashed #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #aaa;
-  font-family: 'Courier New', serif;
-  font-size: 0.9rem;
+.screenshot-preview {
+  cursor: pointer;
 }
 
 .download-link {
