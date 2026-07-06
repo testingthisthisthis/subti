@@ -156,6 +156,52 @@ mark.search-hit-current {
   cursor: pointer;
 }
 
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal.is-open {
+  display: flex;
+}
+
+.video-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.video-modal-content {
+  position: relative;
+  width: min(90vw, 960px);
+  z-index: 1;
+}
+
+.video-modal-player {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  border-radius: 4px;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
 .download-link {
   display: inline-block;
   font-size: 1rem;

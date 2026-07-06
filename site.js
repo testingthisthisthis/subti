@@ -374,3 +374,36 @@
     img.addEventListener('mouseleave', () => { img.src = staticSrc; });
   }
 })();
+
+(() => {
+  const modal = document.getElementById('video-modal');
+  if (!modal) return;
+
+  const player = modal.querySelector('.video-modal-player');
+  const closeBtn = modal.querySelector('.video-modal-close');
+  const backdrop = modal.querySelector('.video-modal-backdrop');
+
+  const openModal = (videoSrc) => {
+    player.src = videoSrc;
+    modal.classList.add('is-open');
+    player.play();
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    player.pause();
+    player.src = '';
+  };
+
+  for (const img of document.querySelectorAll('.screenshot-preview')) {
+    const videoSrc = img.dataset.video;
+    if (!videoSrc) continue;
+    img.addEventListener('click', () => openModal(videoSrc));
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+})();
