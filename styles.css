@@ -92,7 +92,7 @@ mark.search-hit-current {
 .hero {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 15px;
 }
 
@@ -138,13 +138,19 @@ mark.search-hit-current {
 }
 
 .hero-image {
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  align-content: start;
+}
+
+.hero-image.stacked {
+  grid-template-columns: 1fr;
 }
 
 .hero-image img {
-  width: 200px;
+  width: 100%;
   height: auto;
   border: 1px solid #ccc;
 }

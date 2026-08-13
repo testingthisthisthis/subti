@@ -407,3 +407,28 @@
     if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
 })();
+
+(() => {
+  const STACK_THRESHOLD_PX = 500;
+
+  const heroes = [...document.querySelectorAll('.hero')].filter((hero) =>
+    hero.querySelector('.hero-text') && hero.querySelector('.hero-image')
+  );
+  if (!heroes.length) return;
+
+  const layout = () => {
+    for (const hero of heroes) {
+      const text = hero.querySelector('.hero-text');
+      const gallery = hero.querySelector('.hero-image');
+      gallery.classList.toggle('stacked', text.offsetHeight > STACK_THRESHOLD_PX);
+    }
+  };
+
+  layout();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layout, 150);
+  });
+})();
