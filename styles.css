@@ -92,8 +92,7 @@ mark.search-hit-current {
 .hero {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
+  align-items: center;
   margin-bottom: 15px;
 }
 
@@ -139,15 +138,14 @@ mark.search-hit-current {
 }
 
 .hero-image {
-  width: 28%;
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 10px;
 }
 
 .hero-image img {
-  width: 100%;
+  max-width: 200px;
   height: auto;
   border: 1px solid #ccc;
 }
