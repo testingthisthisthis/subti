@@ -1,0 +1,54 @@
+name: Assemble macOS dmg and upload to release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag to attach the assembled asset to"
+        required: true
+        default: v0.0.3
+      chunk_prefix:
+        description: "Chunk filename prefix under dmg-chunks/"
+        required: true
+        default: subti-0.0.3.dmg.part_
+      output_name:
+        description: "Final assembled asset filename"
+        required: true
+        default: subti-0.0.3.dmg
+      expected_sha256:
+        description: "Expected sha256 of the assembled file (optional)"
+        required: false
+        default: ""
+
+jobs:
+  assemble:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble chunks
+        run: |
+          cat dmg-chunks/${{ inputs.chunk_prefix }}* > "${{ inputs.output_name }}"
+          ls -la "${{ inputs.output_name }}"
+          shasum -a 256 "${{ inputs.output_name }}"
+
+      - name: Verify checksum
+        if: ${{ inputs.expected_sha256 != '' }}
+        run: |
+          actual=$(shasum -a 256 "${{ inputs.output_name }}" | awk '{print $1}')
+          expected="${{ inputs.expected_sha256 }}"
+          echo "actual:   $actual"
+          echo "expected: $expected"
+          if [ "$actual" != "$expected" ]; then
+            echo "Checksum mismatch!"
+            exit 1
+          fi
+
+      - name: Upload to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ inputs.release_tag }}" "${{ inputs.output_name }}" \
+            --repo "${{ github.repository }}" --clobber
